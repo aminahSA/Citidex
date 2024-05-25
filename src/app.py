@@ -1,6 +1,5 @@
-from flask_app import app
 from flask import Flask, jsonify, request
-
+app = Flask(__name__)
 
 # Route for getting data
 @app.route('/api/data', methods=['GET'])
@@ -33,3 +32,8 @@ def form_display():
 
 
 #route to display the results.
+
+
+# Run the Flask application
+if __name__ == '__main__':
+    app.run()
