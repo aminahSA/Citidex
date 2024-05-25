@@ -12,6 +12,9 @@ def get_data():
         conn = retrieve_county_info.connect_to_db()
         rows = retrieve_county_info.get_county_data(conn)
         return jsonify(rows)
+    except Exception as e:
+        # Return an error message if an exception occurs
+        return jsonify({'error': str(e)}), 500
     finally:
         # Close the database connection
         if conn is not None:
