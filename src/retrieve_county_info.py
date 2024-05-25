@@ -28,6 +28,8 @@ def get_county_data(conn):
     # Close the cursor
     cursor.close()
 
+    return rows
+
 # Main script
 if __name__ == '__main__':
     # Connect to the PostgreSQL database
@@ -35,7 +37,7 @@ if __name__ == '__main__':
     
     try:
         # Retrieve data from PostgreSQL database
-        get_county_data(conn)
+        rows = get_county_data(conn)
         print("Data successfully retrieved.")
     finally:
         # Close the database connection

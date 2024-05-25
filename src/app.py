@@ -1,12 +1,24 @@
+
 from flask import Flask, jsonify, request
+from src import retrieve_county_info
+
 app = Flask(__name__)
 
 # Route for getting data
 @app.route('/api/data', methods=['GET'])
 def get_data():
+    # Try to receive data from the database using rci module
+    try:
+        conn = retrieve_county_info.connect_to_db()
+        rows = retrieve_county_info.get_county_data(conn)
+        return jsonify(rows)
+    finally:
+        # Close the database connection
+        conn.close()
+
     # Example data
-    data = {'message': 'Hello from Flask'}
-    return jsonify(data)
+    #data = {'message': 'Hello from Flask'}
+    #return jsonify(data)
 
 # Route for posting data
 @app.route('/api/data', methods=['POST'])
