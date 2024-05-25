@@ -1,4 +1,3 @@
-
 from flask import Flask, jsonify, request
 from src import retrieve_county_info
 
