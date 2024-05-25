@@ -6,6 +6,7 @@ app = Flask(__name__)
 # Route for getting data
 @app.route('/api/data', methods=['GET'])
 def get_data():
+    conn = None
     # Try to receive data from the database using rci module
     try:
         conn = retrieve_county_info.connect_to_db()
@@ -13,7 +14,8 @@ def get_data():
         return jsonify(rows)
     finally:
         # Close the database connection
-        conn.close()
+        if conn is not None:
+            conn.close()
 
     # Example data
     #data = {'message': 'Hello from Flask'}
