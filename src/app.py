@@ -4,7 +4,7 @@ from urllib.parse import urlparse
 import psycopg2
 from psycopg2 import sql
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 url = urlparse('postgres://u8rksns7e0ue9o:p9f315f6fb590af888dfa3acff321ee7f56970147ebeb53ffed115f88f86bfd22@ce0lkuo944ch99.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d962ts7irs7mfr')
 dbname = url.path[1:]
 user = url.username
