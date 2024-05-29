@@ -12,13 +12,9 @@
 
 <body>
     <header>
-        <nav class="custom-header">
-            <div class="container">
-                <div class="navbar-brand">
-                    <img class="citidex logo" src="logo-placeholder.png">
-                </div>
-            </div>
-        </nav>
+        <div class="custom-header">
+            <img class="citidex-logo" src="{{ url_for('static', filename='logo-placeholder.png') }}">
+        </div>
     </header>
 
     <div class="main-content-container" style="width: 1280px; margin: 0 auto;">
@@ -32,7 +28,7 @@
                     <div id="search-results" class="list-group mt-2"></div>
                 </div>
             <div class="image-container" style="height: 450px; padding: 12px;">
-                <img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px; height: 414.896px; width: 657.323px;" src="{{ url_for('static', filename='logo-placeholder.png') }}" alt="Citidex logo">
+                <img class="usa" style="min-height: 300px; height: 414.896px; width: 657.323px;" src="{{ url_for('static', filename='logo-placeholder.png') }}" alt="Citidex logo">
             </div>
     </div>
     
