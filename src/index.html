@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Citidex</title>
+    <link rel="stylesheet" href="styles.css">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&amp;display=swap">
@@ -21,6 +23,40 @@
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56" style="overflow: visible;display: block;width: 1280px;">
+
+    <header>
+        <nav class="custom-header">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="#">Company <span>logo</span></a>
+                    <button class="navbar-toggler" id="navbar-toggle-btn" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">&#9776;</span>
+                    </button>
+                </div>
+                <div class="navbar-collapse" id="navbar-collapse">
+                    <ul class="navbar-nav links">
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Surveys</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#" class="custom-navbar">Roles</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" href="#">
+                                <img class="dropdown-image" src="logo-placeholder.png" alt="Your Image">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Payments</a>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- 
     <div class="row" style="width: 1280px;margin: 0px;">
         <div class="col-lg-12" style="padding: 0px;">
             <nav class="navbar navbar-expand-md custom-header navbar-light" style="height: 100px;">
@@ -43,6 +79,8 @@
             </nav>
         </div>
     </div>
+    -->
+
     <div class="row gy-4 gy-md-0" style="height: 450px;width: 1280px;margin: 0px;">
         <div class="col-md-6 col-lg-5 col-xl-4 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="height: 450px;padding-left: 38px;padding-top: 0px;">
             <div style="max-width: 350px;height: 370px;">
@@ -107,6 +145,13 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/new-age.js"></script>
 </body>
+
+ <script>
+        // Toggle navbar collapse
+        document.getElementById("navbar-toggle-btn").addEventListener("click", function() {
+            document.getElementById("navbar-collapse").classList.toggle("show");
+        });
+    </script>
 
 <script>
     $(document).ready(function() {
