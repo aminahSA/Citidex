@@ -12,6 +12,32 @@ password = url.password
 host = url.hostname
 port = url.port
 
+# Function for connecting to the database 
+def get_db_connection():
+    conn = psycopg2.connect(
+        dbname=dbname,
+        user=user,
+        password=password,
+        host=host,
+        port=port
+    )
+    return conn
+
+
+# Route for returning matching city names when searched
+@app.route('/api/search_cities', methods=['GET'])
+def search_cities():
+    query = request.args.get('query', '')
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT name FROM median_income_by_county WHERE name ILIKE %s LIMIT 10", ('%' + query + '%',))
+    results = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return jsonify([result[0] for result in results])
+
+
+
 # Route for getting data
 @app.route('/api/data', methods=['GET'])
 def get_data():    
