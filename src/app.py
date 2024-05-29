@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from src import retrieve_county_info
 from urllib.parse import urlparse
 import psycopg2
@@ -23,6 +23,10 @@ def get_db_connection():
     )
     return conn
 
+# Route for landing page
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 # Route for returning matching city names when searched
 @app.route('/api/search_cities', methods=['GET'])
@@ -81,10 +85,7 @@ def post_data():
     # Process the posted data here
     return jsonify({'status': 'success', 'received': posted_data})
 
-# Route for landing page
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+
 
 # have a route for the home page
 @app.route('/home')
