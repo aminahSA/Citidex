@@ -5,22 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Name</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-
 </head>
 
 <body>
     <header>
         <div class="custom-header">
-            <img class="citidex-logo" src="{{ url_for('static', filename='logo-placeholder.png') }}">
+            <div class="citidex-name">Citidex</div>            
             <a class="header-text" href="about.html">about</a>
         </div>
     </header>
 
     <div class="main-content-container" style="width: 1280px; margin: 0 auto;">
                 <div class="text-container" style="max-width: 350px;">
-                    <h2 class="header-text" style="font-family: 'Abhaya Libre', serif; font-size: 28px; margin-bottom: 0;">Compare cost of living in cities across the U.S.</h2>
+                    <h2 style="font-family: 'Abhaya Libre', serif; font-size: 50px; margin-bottom: 0;">Compare cost of living in cities across the U.S.</h2>
                     <p class="par-text" style="font-size: 16px; margin: 0; margin-top: 7px; margin-bottom: 32px;">Citidex makes it easy to compare the cost of living in places across the U.S. so that you can make the right decision for you -- go higher precision by comparing counties, or look at the bigger picture by comparing states.</p>
                    <div class="browse-by-buttons"> 
                         <button class="browse-by-button">Browse by Search</button>

@@ -7,13 +7,15 @@ body {
 
 /* Added by me */
 .custom-header {
-    background-color: rgba(81, 159, 238, 0.5);   
+    background-color: rgba(98, 149, 200, 0.327);   
     height: 80px;
     padding: 5%;
     display:flex;
 }
 
-.citidex-logo {
+.citidex-name {
+    font-size: large;
+    font-family: 'Verdana', sans-serif;
     flex: 1
 }
 
@@ -44,7 +46,8 @@ body {
 }
 
 .browse-by-button {
-    flex:1
+    flex:1;
+    margin: 5%;
 }
 
 
