@@ -6,6 +6,23 @@ body {
 }
 
 /* Added by me */
+.custom-header {
+    background-color: rgba(81, 159, 238, 0.5);   
+    height: 80px;
+    padding: 5%;
+    display:flex;
+}
+
+.citidex-logo {
+    flex: 1
+}
+
+.header-text {
+    font-size: small;
+    font-family: 'Gill Sans', Calibri;
+}
+
+
 .main-content-container {
     display:flex;
     max-width: 1280px;
@@ -13,21 +30,26 @@ body {
 }
 
 .text-container {
-    flex: 1
+    flex: 1;
+    padding: 5%
 }
 
 .image-container {
-    flex: 2
+    flex: 2;
+    padding: 5%
 }
 
-.custom-header {
-    background-color: #519fee;
-    height: 100px;
-    padding: 0 20px;
+.browse-by-buttons {
+    display: flex;
 }
+
+.browse-by-button {
+    flex:1
+}
+
 
 .custom-footer {
-    background-color: rgb(30, 47, 48);
+    background-color: rgb(175, 203, 204);
     height: 80px;
     padding: 0 20px;
 }
