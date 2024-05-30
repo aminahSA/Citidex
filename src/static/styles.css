@@ -7,16 +7,16 @@ body {
 
 /* Header Section*/
 .custom-header {
-    background-color: rgba(98, 149, 200, 0.327);   
-    height: 10px;
+    background-color: rgba(98, 149, 200, 0.015);   
+    height: 5px;
     padding: 5%;
     display:flex;
 }
 
 .citidex-name {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
-    color: blueviolet;
+    color: rgb(101, 6, 191);
     font-family: 'Verdana', sans-serif;
     flex: 1
 }
