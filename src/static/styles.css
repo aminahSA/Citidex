@@ -5,26 +5,29 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Added by me */
+/* Header Section*/
 .custom-header {
     background-color: rgba(98, 149, 200, 0.327);   
-    height: 80px;
+    height: 10px;
     padding: 5%;
     display:flex;
 }
 
 .citidex-name {
-    font-size: large;
+    font-size: 40px;
+    font-weight: bold;
+    color: blueviolet;
     font-family: 'Verdana', sans-serif;
     flex: 1
 }
 
 .header-text {
-    font-size: small;
+    font-size: 20px;
+    color:aliceblue;
     font-family: 'Gill Sans', Calibri;
 }
 
-
+/* Middle Section */
 .main-content-container {
     display:flex;
     max-width: 1280px;
@@ -50,12 +53,13 @@ body {
     margin: 5%;
 }
 
-
+/* Footer Section */
 .custom-footer {
-    background-color: rgb(175, 203, 204);
+    background-color: rgb(28, 31, 31);
     height: 80px;
     padding: 0 20px;
 }
+
 
 /* Media query for mobile */
 @media (max-width: 768px) {
