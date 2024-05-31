@@ -7,7 +7,7 @@ body {
 
 /* Header Section*/
 .custom-header {
-    background-color: rgba(54, 208, 255, 0.256);   
+    background-color: rgba(82, 144, 225, 0.13);   
     max-height: 100%;
     display:flex;
     align-items: center;
@@ -15,20 +15,23 @@ body {
 
 .citidex-name {
     font-size: 30px;
-    padding: 5%;
     max-height: 50%;
+    padding-left: 2%;
     font-weight: bold;
-    color: rgb(101, 6, 191);
-    font-family: 'Verdana', sans-serif;
+    color: rgb(111, 72, 157);
+    font-family: 'Champagne', sans-serif;
     flex: 1
 }
 
 .header-text {
     font-size: 20px;
     padding:5%;
-    color:rgb(20, 0, 63);
-    font-family: 'Gill Sans', Calibri;
+    color: rgb(111, 72, 157);
+    font-family: 'Champagne', Calibri;
+    text-decoration: none;
 }
+
+
 
 /* Middle Section */
 .main-content-container {
@@ -38,12 +41,10 @@ body {
 
 .text-container {
     flex: 1;
-    padding: 5%
 }
 
 .image-container {
     flex: 2;
-    padding: 5%
 }
 
 .browse-by-buttons {
@@ -57,11 +58,20 @@ body {
 
 /* Footer Section */
 .custom-footer {
-    background-color: rgb(28, 31, 31);
+    background-color: rgba(129, 130, 130, 0.193);
     max-height: 100%;
     overflow:hidden;
 }
 
+.footer-text {
+    color: rgb(111, 72, 157);
+    font-family: 'Champagne', Calibri;
+}
+
+@font-face {
+    font-family: 'Champagne';
+    src: url('fonts/Champagne\ &\ Limousines.ttf') format('truetype');
+}
 
 /* Media query for mobile */
 @media (max-width: 768px) {
